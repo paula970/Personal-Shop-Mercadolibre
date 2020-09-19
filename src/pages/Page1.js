@@ -74,7 +74,7 @@ class Page1 extends Component {
     return (
       <div className="app container">
         <div className="jumbotron">
-          <p className="lead text-center">PaulaMP Shop</p>
+          <h1 className="lead text-center">PaulaMP Shop</h1>
           <Search
           datosBusqueda={this.datosBusqueda}
           />

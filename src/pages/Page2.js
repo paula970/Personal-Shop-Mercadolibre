@@ -15,7 +15,7 @@ class Page2 extends Component{
         return(
             <div className="app container">
                 <div className="jumbotron">
-                    <p className="lead text-center">PaulaMP Shop</p>
+                    <h1 className="lead text-center">PaulaMP Shop</h1>
                         <Detalle
                             productos =  {this.state.productoID}
                         />
