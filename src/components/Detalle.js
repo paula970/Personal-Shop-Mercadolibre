@@ -15,7 +15,7 @@ const Detalle = props => {
     //{(Math.floor((100 - (price * 100) / original_price))) + "% OFF"}
     //image = props.productos.pictures[i].url
     
-    //await const a = props.productos.pictures[0]
+    //await const a = props.productos.pictures[0]BORRAR
     return (
 
         <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
