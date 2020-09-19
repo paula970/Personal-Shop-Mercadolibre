@@ -1,6 +1,5 @@
 import React, { Component,useState } from 'react';
 import Detalle from '../components/Detalle';
-import { useAsync } from "react-async"
 
 class Page2 extends Component{
     state = {
@@ -8,7 +7,6 @@ class Page2 extends Component{
     };
     
     async componentDidMount(){
-        //const { match: { params } } = this.props;
         const response = await fetch(`https://api.mercadolibre.com/items/${this.props.match.params.id}`);
         const json = await response.json();
         this.setState({ productoID: json });

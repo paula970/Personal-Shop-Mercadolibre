@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import Search from '../components/Search';
-import Result from '../components/Result';
-//import Products from './Products'; 
+import Result from '../components/Result'; 
 
 class Page1 extends Component {
 
   state={
     termino : '',
     productos:[], //: porque es un objeto
-    pagina: '',
-    idVendedor: '',
-    idProducto:''
+    pagina: ''
   }
 
   scroll=()=>{
@@ -59,23 +56,12 @@ class Page1 extends Component {
     const offset = pagina * 50;
     const idVendedor = this.state.idVendedor;
     const url = `https://api.mercadolibre.com/sites/MCO/search?q=${termino}&offset=${offset}`;
-    const urlV = `https://api.mercadolibre.com/users/${idVendedor}`;
-    console.log(url)
-    
-    //usar fetch que es parte de JS
+    //const urlV = `https://api.mercadolibre.com/users/${idVendedor}`;
+
     fetch(url)
       .then(respuesta => respuesta.json() )
       .then(resultado => this.setState({ productos : resultado.results}) )
   }
-
-  vendedorID = (idVendedor)=>{
-    this.setState({
-      idVendedor : idVendedor,
-    }, ()=>{
-      this.consultarApi();
-    })
-  }
-
   datosBusqueda = (termino)=>{
     this.setState({
       termino : termino,
